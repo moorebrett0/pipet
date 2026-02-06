@@ -11,8 +11,8 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 
-	"github.com/brettsmith/pipet/internal/brain"
-	"github.com/brettsmith/pipet/internal/pet"
+	"github.com/moorebrett0/pipet/internal/brain"
+	"github.com/moorebrett0/pipet/internal/pet"
 )
 
 // Router dispatches Discord messages and slash commands.

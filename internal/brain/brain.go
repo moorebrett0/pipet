@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/brettsmith/pipet/internal/monitor"
-	"github.com/brettsmith/pipet/internal/pet"
-	"github.com/brettsmith/pipet/internal/shell"
-	"github.com/brettsmith/pipet/internal/species"
+	"github.com/moorebrett0/pipet/internal/monitor"
+	"github.com/moorebrett0/pipet/internal/pet"
+	"github.com/moorebrett0/pipet/internal/shell"
+	"github.com/moorebrett0/pipet/internal/species"
 )
 
 // Brain wraps an AI provider with system prompt building and tool-use loop.

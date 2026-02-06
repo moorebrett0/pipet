@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/brettsmith/pipet/internal/discord"
-	"github.com/brettsmith/pipet/internal/pet"
-	"github.com/brettsmith/pipet/internal/species"
+	"github.com/moorebrett0/pipet/internal/discord"
+	"github.com/moorebrett0/pipet/internal/pet"
+	"github.com/moorebrett0/pipet/internal/species"
 )
 
 // MessageSender can send messages and update presence.

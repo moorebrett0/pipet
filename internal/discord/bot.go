@@ -9,8 +9,8 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 
-	"github.com/brettsmith/pipet/internal/pet"
-	"github.com/brettsmith/pipet/internal/species"
+	"github.com/moorebrett0/pipet/internal/pet"
+	"github.com/moorebrett0/pipet/internal/species"
 )
 
 // Bot wraps the Discord session and manages slash commands, messages, and presence.

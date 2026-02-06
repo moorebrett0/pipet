@@ -96,7 +96,7 @@ Then:
 ### 5. Setup
 
 ```bash
-git clone https://github.com/brettsmith/pipet.git
+git clone https://github.com/moorebrett0/pipet.git
 cd pipet
 ./setup.sh
 ```
@@ -273,7 +273,7 @@ discord:
 
 ```bash
 sudo apt install golang git
-git clone https://github.com/brettsmith/pipet.git
+git clone https://github.com/moorebrett0/pipet.git
 cd pipet
 ./setup.sh
 go build ./cmd/pipet
@@ -283,7 +283,7 @@ go build ./cmd/pipet
 ### One-liner (after a release is published)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/brettsmith/pipet/main/install.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/moorebrett0/pipet/main/install.sh | sudo bash
 ```
 
 ### Run as a service

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/brettsmith/pipet/internal/pet"
-	"github.com/brettsmith/pipet/internal/species"
+	"github.com/moorebrett0/pipet/internal/pet"
+	"github.com/moorebrett0/pipet/internal/species"
 )
 
 // Run performs interactive terminal onboarding. Returns true if onboarding completed.

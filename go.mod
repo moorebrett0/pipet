@@ -1,4 +1,4 @@
-module github.com/brettsmith/pipet
+module github.com/moorebrett0/pipet
 
 go 1.24
 
