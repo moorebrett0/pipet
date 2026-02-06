@@ -2,9 +2,9 @@
 set -euo pipefail
 
 # PiPet installer
-# Usage: curl -sSL https://raw.githubusercontent.com/brettsmith/pipet/main/install.sh | sudo bash
+# Usage: curl -sSL https://raw.githubusercontent.com/moorebrett0/pipet/main/install.sh | sudo bash
 
-REPO="brettsmith/pipet"
+REPO="moorebrett0/pipet"
 INSTALL_DIR="/usr/local/bin"
 CONFIG_DIR="/etc/pipet"
 DATA_DIR="/var/lib/pipet"
@@ -100,7 +100,12 @@ if [ ! -f "$CONFIG_DIR/config.yaml" ]; then
     ask "Your Discord user ID (owner):" OWNER_ID
 
     CLAUDE_KEY=""
-    ask "Anthropic API key (optional, press enter to skip):" CLAUDE_KEY
+    ask "Anthropic API key (paid, press enter to skip):" CLAUDE_KEY
+
+    GEMINI_KEY=""
+    if [ -z "$CLAUDE_KEY" ]; then
+        ask "Google API key (free tier available, press enter to skip):" GEMINI_KEY
+    fi
 
     cat > "$CONFIG_DIR/config.yaml" <<YAML
 discord:
@@ -118,6 +123,10 @@ claude:
   max_tool_iterations: 5
   rate_limit: 10
   rate_window: 1m
+
+gemini:
+  api_key: "$GEMINI_KEY"
+  model: "gemini-2.5-flash"
 
 pet:
   state_path: "$DATA_DIR/state.json"
