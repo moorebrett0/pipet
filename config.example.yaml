@@ -1,0 +1,53 @@
+discord:
+  # Required: Get from discord.com/developers
+  # Can also set DISCORD_BOT_TOKEN env var
+  bot_token: ""
+  # Required: The channel ID where the pet lives
+  channel_id: ""
+  # Required: Discord user IDs who can run commands
+  owner_ids:
+    - "123456789"
+  # Let anyone in the channel /pet for affection
+  allow_spectator_pet: true
+  # Put diagnostic output in threads to keep channel clean
+  use_threads: true
+
+ai:
+  # Force a specific provider: "claude" or "gemini"
+  # Leave empty to auto-detect from API keys (prefers Claude)
+  # Can also set AI_PROVIDER env var
+  provider: ""
+
+claude:
+  # Optional: Enables AI responses via Claude. Can also set ANTHROPIC_API_KEY env var
+  # Paid API — https://console.anthropic.com/settings/keys
+  api_key: ""
+  model: "claude-sonnet-4-5-20250929"
+  max_tokens: 1024
+  max_tool_iterations: 5
+  rate_limit: 10         # max requests per window
+  rate_window: 1m        # sliding window duration
+
+gemini:
+  # Optional: Enables AI responses via Gemini. Can also set GOOGLE_API_KEY env var
+  # Free tier available — https://aistudio.google.com/apikey
+  api_key: ""
+  model: "gemini-2.5-flash"
+
+pet:
+  state_path: "state.json"
+  save_interval: 5m
+
+monitor:
+  interval: 30s
+
+shell:
+  timeout: 10s
+  max_output_bytes: 10240
+
+proactive:
+  enabled: true
+  check_interval: 60s
+  morning_hour: 8          # 24h format, local time
+  boredom_minutes: 120     # minutes without interaction
+  distress_cooldown: 30m   # minimum time between distress alerts

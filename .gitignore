@@ -1,0 +1,21 @@
+# Binary
+pipet
+pipet-linux-*
+
+# Secrets & local config
+.env
+config.yaml
+state.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db

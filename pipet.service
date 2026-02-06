@@ -1,0 +1,27 @@
+[Unit]
+Description=PiPet — digital pet living in Discord
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/pipet -config /etc/pipet/config.yaml
+WorkingDirectory=/var/lib/pipet
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Run as dedicated user
+User=pipet
+Group=pipet
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/pipet
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
